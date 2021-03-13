@@ -8,6 +8,7 @@ class PostsController < ApplicationController
 
   def create
     post = Post.create(content: params[:content], checked: false)
+    #jsonの中身はキーとバリューみたいなやつだってだけ！postなのかitemなのかは引数の名前は任意=適当でもまあいける(わかりづらいけど)
     render json: { post: post}
   end
 
